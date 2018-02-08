@@ -1,0 +1,43 @@
+html {
+	font-size: 1em;
+}
+
+p.artigo::first-line {
+	color: red;
+	line-height: bold;
+}
+
+header {
+	border: 1px solid red;
+}
+
+section {
+	font-size: 1.2em;
+}
+
+div {
+	font-size: 28px;
+}
+
+p {
+	font-size: 0.5em;
+}
+/*
+.menu ul {
+    padding:0px;
+    margin:0px;
+    background-color:#EDEDED;
+    list-style:none;
+}
+
+.menu ul li { display: inline; }
+*/
+
+/*
+.hero {
+	background-image
+	background-attachment
+	background-position
+	background-repeat
+}
+*/

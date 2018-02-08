@@ -1,0 +1,12 @@
+UNIDADES DE MEDIDA
+==================
+
+Mídia		Recomendado		Ocasional
+----------------------------------------------
+Tela 		em, rem, % 		px 			
+Impressão 	em, rem, % 		cm, mm, in, pt, pc
+
+Unidade 	Descrição
+%		 	porcentagem, relativa à mesma propriedade do elemento pai
+em 			relativa ao tamanho de fonte do elemento pai
+rem 		relativa ao tamanho de fonte do elemento raiz

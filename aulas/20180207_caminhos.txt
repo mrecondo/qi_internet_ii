@@ -1,0 +1,13 @@
+CAMINHOS
+========
+
+- relativos
+	"assets/im/logo.png" -> inicia no mesmo nível do arquivo de origem
+	"../media/assets/im/logo.png" -> inicia um nível acima do arquivo de origem
+	
+- absolutos
+	"/var/windows/media/assets/im/logo.png"
+	"C:\htdocs\assets\im\logo.png"
+
+- url
+	"http://jquery.com/2.0/jquery.min.js"

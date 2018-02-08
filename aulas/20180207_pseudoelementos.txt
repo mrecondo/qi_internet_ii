@@ -1,0 +1,10 @@
+PSEUDO ELEMENTOS
+================
+
+    ::after
+    ::before
+    ::first-letter
+    ::first-line
+    ::selection
+    ::backdrop
+	
