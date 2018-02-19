@@ -1,0 +1,12 @@
+.container {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 25% auto 25%;
+  grid-template-rows: auto;
+}
+
+.item {
+  border: 1px solid silver;
+  width: 100px;
+  height: 100px;
+}
