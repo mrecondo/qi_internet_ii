@@ -1,0 +1,38 @@
+body { padding: 1rem; }
+main {
+    max-width: 10000px;
+    margin: 0;
+}
+article { margin: 0; }
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+/* card */
+.item { 
+    display: flex;
+    flex-flow: column;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.item img {
+    max-width: 90%;
+    margin: 0.5rem;
+    align-self: center;
+    order: -1;
+}
+
+.item button {
+    margin-top: auto;
+    background-color: teal;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
