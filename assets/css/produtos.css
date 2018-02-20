@@ -1,15 +1,32 @@
 body { padding: 1rem; }
+/* ==== FALLBACK === */
 main {
-    max-width: 10000px;
-    margin: 0;
+    max-width: 500px;
+    margin: 0 auto;
 }
-article { margin: 0; }
+
+article {
+    margin: 1rem 0;
+}
 
 .produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1rem;
+    margin: 0 auto;
 }
+/* == FIM FALLBACK == */
+@supports (display: grid) {
+    main {
+        max-width: 10000px;
+        margin: 0;
+    }
+    article { margin: 0; }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem;
+    }
+}
+
 /* card */
 .item { 
     display: flex;
