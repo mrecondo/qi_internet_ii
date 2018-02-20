@@ -13,7 +13,7 @@
 .container-2 {
   display: grid;
   grid-template-columns: repeat(5, 10vw);
-  grid-template-rows: repeat(5, 10vh);
+  grid-template-rows: repeat(5, 10vw);
 }
 
 .item {
