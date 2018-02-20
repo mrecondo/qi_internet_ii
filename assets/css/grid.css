@@ -2,7 +2,18 @@
   border: 1px solid red;
   display: grid;
   grid-template-columns: 25% auto 25%;
-  grid-template-rows: auto;
+  grid-template-rows: 25% auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: center;
+  /*justify-content: center;*/
+  align-items: center;
+}
+
+.container-2 {
+  display: grid;
+  grid-template-columns: repeat(5, 10vw);
+  grid-template-rows: repeat(5, 10vh);
 }
 
 .item {
@@ -10,3 +21,8 @@
   width: 100px;
   height: 100px;
 }
+/*
+.item-linha-1 {
+  grid-area: "linha 1";
+}
+*/
