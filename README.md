@@ -11,3 +11,4 @@
 ### Diversos
 * [Lorem Ipsum Samuel Jackson](https://slipsum.com/)
 * [Controle de versão (GIT)](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Sobre-Controle-de-Vers%C3%A3o)
+* [Otimização de imagens](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization)
