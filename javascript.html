@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- <script src="assets/js/main.js"></script> -->
+    
+</head>
+<body>
+    <form action="#" method="get" id="cadastro">
+        <p>Teste: <input onkeyup='validaNome()' type="text" name="nome" id="nome"></p>
+        <p><span id="mesg">&nbsp;</span></p>
+        <p><input type="submit" value="ok" id="form-envio"></p>
+        
+    </form>
+    <script type="text/javascript">
+        f = window.document.getElementById('cadastro');
+        n = window.document.getElementById('nome');
+        m = window.document.getElementById('mesg');
+        b = f[1];
+
+        b.disabled = true;
+
+        function validaNome() {
+            if (n.value == "") {
+                m.innerHTML = "Este campo é obrigatório";
+                n.style.borderColor = 'red';
+            } else if (n.value.length < 8) {
+                m.style.color = 'red';
+                m.innerHTML = "Faltam " + (8 - n.value.length) + " caracteres";
+                console.log('digite mais caracteres...');
+            } else {
+                m.style.color = 'green';
+                m.innerHTML = "Ok";
+                b.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
