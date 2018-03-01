@@ -10,17 +10,35 @@
     
 </head>
 <body>
+    <select id='menu-old' name="menu-old" onchange="menuOld();">
+        <option value="home">Home</option>
+        <option value="contato">Contato</option>
+        <option value="localizacao">Onde estamos</option>
+        <option value="etc">Sei lá</option>
+    </select>
     <form action="#" method="get" id="cadastro">
-        <p>Teste: <input onkeyup='validaNome()' type="text" name="nome" id="nome"></p>
+        <p id='clique'>Teste: <input onkeyup='validaNome()' type="text" name="nome" id="nome"></p>
         <p><span id="mesg">&nbsp;</span></p>
         <p><input type="submit" value="ok" id="form-envio"></p>
-        
     </form>
     <script type="text/javascript">
+        function menuOld() {
+            menu = document.getElementById('menu-old');
+            selecionado = menu.options.selectedIndex;
+            opcao = menu[selecionado].value;
+            window.location = opcao + ".html";
+        }
+        document.getElementById('clique').
+        addEventListener('click', function() {
+            console.log('clicou');
+        });
+
         f = window.document.getElementById('cadastro');
         n = window.document.getElementById('nome');
         m = window.document.getElementById('mesg');
+        
         b = f[1];
+        
 
         b.disabled = true;
 

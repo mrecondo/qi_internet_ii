@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Usando JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+</head>
+<body>
+    <select id='menu-old' name="menu-old">
+        <option value="home">Home</option>
+        <option value="contato">Contato</option>
+        <option value="localizacao">Onde estamos</option>
+        <option value="etc">Sei lá</option>
+    </select>
+    <form action="#" method="get" id="cadastro">
+        <p id='clique'>
+            Teste:
+            <input type="text" name="nome" id="nome">
+        </p>
+        <p><span id="mesg">&nbsp;</span></p>
+        <p><input type="submit" value="ok" id="form-envio"></p>
+    </form>
+    <script>
+        // jquery
+        $(document).ready(function() {
+            $('#nome').focus();
+
+            // valida quantidade de caracteres
+            $('#nome').keyup(function() {
+                if ($('#nome').val().length < 8) {
+                    alert('não pode ser menor que 8 caracteres');
+                }
+            });
+
+            // valida campo vazio
+            $('#nome').blur(function() {
+                if ($('#nome').val() == "") {
+                    
+                    $('#nome').focus();
+                    alert('não pode ser vazio');
+                    
+                }
+            });
+        });
+    </script>
+</body>
+</html>
