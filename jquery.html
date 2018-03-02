@@ -5,8 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Usando JQuery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="assets/js/jquery.min.js"></script> 
+    <style>
+        #add {
+            border: none;
+            border-radius: 1.1em;
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            padding: 0.2em;
+        }
+        .remove {
+            border: none;
+            border-radius: 1.1em;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            padding: 0.2em;
+            padding-left: 0.3em;
+            padding-right: 0.3em;
+            padding-top: 0.1em;
+        }
+    </style>
 </head>
 <body>
     <select id='menu-old' name="menu-old">
@@ -20,18 +40,38 @@
             Teste:
             <input type="text" name="nome" id="nome">
         </p>
+
+        <p class="item">
+            Item: <input type="text" name="item[]">
+            
+        </p>
+        <button id="add">+</button>
+
         <p><span id="mesg">&nbsp;</span></p>
         <p><input type="submit" value="ok" id="form-envio"></p>
     </form>
     <script>
         // jquery
+        function removeItem(eu) { // eu == this
+            $(eu).parent().remove();
+        }
+
         $(document).ready(function() {
             $('#nome').focus();
 
+            var item = "<p class='item'>Item: <input type='text' name='item[]'><span onClick='removeItem(this)' class='remove'>-</span></p>";            
+            
+            // adiciona um novo campo no formulário
+            $('#add').click(function(e) {
+                $(".item").last().after(item);
+                e.preventDefault();
+               
+            });
+            
             // valida quantidade de caracteres
             $('#nome').keyup(function() {
                 if ($('#nome').val().length < 8) {
-                    alert('não pode ser menor que 8 caracteres');
+                   // alert('não pode ser menor que 8 caracteres');
                 }
             });
 
@@ -40,11 +80,12 @@
                 if ($('#nome').val() == "") {
                     
                     $('#nome').focus();
-                    alert('não pode ser vazio');
+                   // alert('não pode ser vazio');
                     
                 }
             });
         });
+        
     </script>
 </body>
 </html>
