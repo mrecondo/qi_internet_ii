@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="carrinho">
+        <h2>Carrinho de compras:</h2>
+        <div id="cart">Carrinho vazio</div>
+        <button id="purge">Esvaziar carrinho</button>
+    </div>
+
+    <div id="content">
+        <div class="produto">
+            <h2>Nome do produto</h2>
+            <img src="assets/media/positivo.png" />
+            <br />
+            R$ 2,00
+            <br />
+            <button value="2901">Comprar</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            show_cart();
+            
+            $('button').click(function() {
+                id = $(this).val();
+                
+                $.get("cart/compra", {prod_id: id}, function(data) {
+                    if(data.indexOf('erro') >0) {
+                        alert('Desculpe. Ocorreu um erro ao processar sua compra.'+data);
+                        return false;
+                    } else {
+                        show_cart();
+                    }
+                });
+                
+                show_cart(id);
+            });
+            
+            $('#purge').click(function(){
+                alert("Carrinho esvaziado com sucesso.");
+                $("#cart").html("Carrinho vazio");
+                $.get("cart/purge", function(){
+                    show_cart();
+                    return false;
+                });
+            });
+            
+        });
+        
+        function show_cart(cod) {
+            $('#cart').html(cod);
+
+            $.get("cart/resumo", function(data) {
+                $('#cart').html(data);
+            });
+        }
+    </script>
+</body>
+</html>
