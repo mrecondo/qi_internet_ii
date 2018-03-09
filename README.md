@@ -8,6 +8,9 @@
 ### HTML5/CSS3
 * [Can I use it?](https://caniuse.com/) Página que lista navegadoes e suas compatibilidades com as novas tecnologias web.
 
+### JavaScript/AJAX
+* [Como fazer requisições ajax](https://tableless.com.br/como-fazer-requisicoes-ajax/?utm_content=buffer2382a&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+
 ### Frameworks/bibliotecas JavaScript
 * [JQuery](https://jquery.com)
 * [Angular JS](https://angularjs.org)
